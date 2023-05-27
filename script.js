@@ -12,8 +12,9 @@ const previousQuestions = [];
 
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
-  ballEl.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   questionEl.inputMode = "none";
+  ballEl.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  questionEl.inputMode = "text";
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
