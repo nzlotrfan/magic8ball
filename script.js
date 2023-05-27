@@ -13,10 +13,10 @@ const previousQuestions = [];
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
   ballEl.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-  questionEl.inputMode = "none";
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
+  questionEl.inputMode = "none";
   setTimeout(function () {
     const responseType = Number((Math.random() * 2).toFixed());
     questionEl.inputMode = "text";
