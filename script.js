@@ -12,7 +12,7 @@ const previousQuestions = [];
 
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
-  ballEl.scrollIntoView(true);
+  ballEl.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   thinkingEl.style.opacity = 1;
   ballEl.style.overflow = "visible";
   buttonEl.style.opacity = 0;
@@ -46,7 +46,7 @@ buttonEl.addEventListener("click", function (e) {
       thinkingEl.style.opacity = 0;
       buttonEl.style.opacity = 1;
       buttonEl.removeAttribute("disabled");
-
+      questionEl.value = "";
       resultsEl.innerHTML = "";
       previousQuestions.forEach(function (question) {
         resultsEl.insertAdjacentHTML("afterbegin", `<tr><td>${question.question}</td><td>${question.answer}</td></tr>`);
