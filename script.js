@@ -14,12 +14,12 @@ buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
   questionEl.inputMode = "none";
   ballEl.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-  questionEl.inputMode = "text";
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
   setTimeout(function () {
     const responseType = Number((Math.random() * 2).toFixed());
+    questionEl.inputMode = "text";
     let currentAnswer;
     switch (responseType) {
       case 0:
