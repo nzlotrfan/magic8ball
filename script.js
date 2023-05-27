@@ -43,8 +43,8 @@ buttonEl.addEventListener("click", function (e) {
       thinkingElText.textContent = "Hmm...";
       ballEl.style.overflow = "hidden";
       thinkingEl.style.animationName = "sideToSide";
-      thinkingEl.style.opacity = 0;
-      // buttonEl.style.opacity = 1;
+      // thinkingEl.style.opacity = 0;
+      buttonEl.style.opacity = 1;
       buttonEl.removeAttribute("disabled");
       questionEl.value = "";
       resultsEl.innerHTML = "";
