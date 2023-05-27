@@ -14,7 +14,6 @@ buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
   ballEl.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   thinkingEl.style.opacity = 1;
-  // ballEl.style.overflow = "visible";
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
   setTimeout(function () {
@@ -41,7 +40,6 @@ buttonEl.addEventListener("click", function (e) {
     previousQuestions.push({ question: questionEl.value, answer: currentAnswer });
     setTimeout(function () {
       thinkingElText.textContent = "Hmm...";
-      ballEl.style.overflow = "hidden";
       thinkingEl.style.animationIterationCount = "infinite";
       thinkingEl.style.opacity = 0;
       buttonEl.style.opacity = 1;

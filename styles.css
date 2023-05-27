@@ -22,6 +22,7 @@ main > div:first-child {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 
 main img {
@@ -100,7 +101,6 @@ button {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  overflow: hidden;
 }
 
 #thinking {
