@@ -16,9 +16,10 @@ buttonEl.addEventListener("click", function (e) {
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
-  questionEl.inputMode = "none";
+
   setTimeout(function () {
     const responseType = Number((Math.random() * 2).toFixed());
+    questionEl.inputMode = "none";
     questionEl.inputMode = "text";
     let currentAnswer;
     switch (responseType) {
