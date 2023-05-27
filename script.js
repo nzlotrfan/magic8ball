@@ -19,8 +19,7 @@ buttonEl.addEventListener("click", function (e) {
 
   setTimeout(function () {
     const responseType = Number((Math.random() * 2).toFixed());
-    questionEl.inputMode = "none";
-    questionEl.inputMode = "text";
+    questionEl.blur();
     let currentAnswer;
     switch (responseType) {
       case 0:
