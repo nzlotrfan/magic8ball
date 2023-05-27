@@ -43,11 +43,11 @@ buttonEl.addEventListener("click", function (e) {
       thinkingElText.textContent = "Hmm...";
       ballEl.style.overflow = "hidden";
       thinkingEl.style.animationName = "sideToSide";
-      // thinkingEl.style.opacity = 0;
+      thinkingEl.style.opacity = 0;
       buttonEl.style.opacity = 1;
       buttonEl.removeAttribute("disabled");
       questionEl.value = "";
-      resultsEl.innerHTML = "";
+      // resultsEl.innerHTML = "";
       previousQuestions.forEach(function (question) {
         resultsEl.insertAdjacentHTML("afterbegin", `<tr><td>${question.question}</td><td>${question.answer}</td></tr>`);
       });
