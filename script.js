@@ -38,19 +38,19 @@ buttonEl.addEventListener("click", function (e) {
         break;
     }
     thinkingEl.style.animationName = "none";
-    setTimeout(function () {
-      previousQuestions.push({ question: questionEl.value, answer: currentAnswer });
-      thinkingElText.textContent = "Hmm...";
-      ballEl.style.overflow = "hidden";
-      thinkingEl.style.animationName = "sideToSide";
-      thinkingEl.style.opacity = 0;
-      buttonEl.style.opacity = 1;
-      buttonEl.removeAttribute("disabled");
-      questionEl.value = "";
-      resultsEl.innerHTML = "";
-      // previousQuestions.forEach(function (question) {
-      //   resultsEl.insertAdjacentHTML("afterbegin", `<tr><td>${question.question}</td><td>${question.answer}</td></tr>`);
-      // });
-    }, "2000");
+    previousQuestions.push({ question: questionEl.value, answer: currentAnswer });
+    // setTimeout(function () {
+    //   thinkingElText.textContent = "Hmm...";
+    //   ballEl.style.overflow = "hidden";
+    //   thinkingEl.style.animationName = "sideToSide";
+    //   thinkingEl.style.opacity = 0;
+    //   buttonEl.style.opacity = 1;
+    //   buttonEl.removeAttribute("disabled");
+    //   questionEl.value = "";
+    //   resultsEl.innerHTML = "";
+    //   previousQuestions.forEach(function (question) {
+    //     resultsEl.insertAdjacentHTML("afterbegin", `<tr><td>${question.question}</td><td>${question.answer}</td></tr>`);
+    //   });
+    // }, "2000");
   }, "2000");
 });
