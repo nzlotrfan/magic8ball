@@ -12,7 +12,7 @@ const previousQuestions = [];
 
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
-  ballEl.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  // ballEl.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   thinkingEl.style.opacity = 1;
   ballEl.style.overflow = "visible";
   buttonEl.style.opacity = 0;
@@ -37,12 +37,12 @@ buttonEl.addEventListener("click", function (e) {
       default:
         break;
     }
-    // thinkingEl.style.animationName = "none";
+    thinkingEl.style.animationName = "none";
     setTimeout(function () {
       previousQuestions.push({ question: questionEl.value, answer: currentAnswer });
       thinkingElText.textContent = "Hmm...";
       ballEl.style.overflow = "hidden";
-      // thinkingEl.style.animationName = "sideToSide";
+      thinkingEl.style.animationName = "sideToSide";
       thinkingEl.style.opacity = 0;
       buttonEl.style.opacity = 1;
       buttonEl.removeAttribute("disabled");
