@@ -13,7 +13,7 @@ const previousQuestions = [];
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
   questionEl.blur();
-  ballEl.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+  ballEl.scrollIntoView();
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
