@@ -12,6 +12,7 @@ const previousQuestions = [];
 
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
+  questionEl.blur();
   ballEl.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
@@ -19,7 +20,6 @@ buttonEl.addEventListener("click", function (e) {
 
   setTimeout(function () {
     const responseType = Number((Math.random() * 2).toFixed());
-    questionEl.blur();
     let currentAnswer;
     switch (responseType) {
       case 0:
