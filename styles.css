@@ -34,7 +34,6 @@ div h3 {
 
 .bubble {
   position: relative;
-  font-family: sans-serif;
   font-size: 18px;
   line-height: 24px;
   background: #000;
@@ -65,7 +64,7 @@ div h3 {
 input {
   border-radius: 0.9rem;
   height: 2rem;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", "Tahoma";
   font-size: 1rem;
   margin: 1rem 1rem 0 1rem;
 }
@@ -135,7 +134,6 @@ main > div:last-child {
 
 /* TABLE */
 table {
-  font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
@@ -206,7 +204,7 @@ table th {
   }
 
   #thinking {
-    left: 7.5rem;
-    bottom: -6.5rem;
+    left: 10rem;
+    bottom: -6rem;
   }
 }

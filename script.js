@@ -12,7 +12,7 @@ const previousQuestions = [];
 
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
-
+  document.querySelector("div>h3").scrollIntoView({ behavior: "smooth", block: "end" });
   thinkingEl.style.opacity = 1;
   ballEl.style.overflow = "visible";
   buttonEl.style.opacity = 0;
