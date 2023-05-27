@@ -37,7 +37,7 @@ buttonEl.addEventListener("click", function (e) {
       default:
         break;
     }
-    thinkingEl.style.animationName = "none";
+    thinkingEl.style.animationIterationCount = 1;
     previousQuestions.push({ question: questionEl.value, answer: currentAnswer });
     // setTimeout(function () {
     //   thinkingElText.textContent = "Hmm...";
