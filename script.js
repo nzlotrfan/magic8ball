@@ -14,7 +14,7 @@ buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
   ballEl.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   thinkingEl.style.opacity = 1;
-  ballEl.style.overflow = "visible";
+  // ballEl.style.overflow = "visible";
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
   setTimeout(function () {
@@ -39,18 +39,18 @@ buttonEl.addEventListener("click", function (e) {
     }
     thinkingEl.style.animationIterationCount = 1;
     previousQuestions.push({ question: questionEl.value, answer: currentAnswer });
-    // setTimeout(function () {
-    //   thinkingElText.textContent = "Hmm...";
-    //   ballEl.style.overflow = "hidden";
-    //   thinkingEl.style.animationName = "sideToSide";
-    //   thinkingEl.style.opacity = 0;
-    //   buttonEl.style.opacity = 1;
-    //   buttonEl.removeAttribute("disabled");
-    //   questionEl.value = "";
-    //   resultsEl.innerHTML = "";
-    //   previousQuestions.forEach(function (question) {
-    //     resultsEl.insertAdjacentHTML("afterbegin", `<tr><td>${question.question}</td><td>${question.answer}</td></tr>`);
-    //   });
-    // }, "2000");
+    setTimeout(function () {
+      thinkingElText.textContent = "Hmm...";
+      ballEl.style.overflow = "hidden";
+      thinkingEl.style.animationIterationCount = "infinite";
+      thinkingEl.style.opacity = 0;
+      buttonEl.style.opacity = 1;
+      buttonEl.removeAttribute("disabled");
+      questionEl.value = "";
+      resultsEl.innerHTML = "";
+      previousQuestions.forEach(function (question) {
+        resultsEl.insertAdjacentHTML("afterbegin", `<tr><td>${question.question}</td><td>${question.answer}</td></tr>`);
+      });
+    }, "2000");
   }, "2000");
 });
