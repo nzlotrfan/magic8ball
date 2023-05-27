@@ -45,7 +45,7 @@ buttonEl.addEventListener("click", function (e) {
       thinkingEl.style.animationName = "sideToSide";
       thinkingEl.style.opacity = 0;
       buttonEl.style.opacity = 1;
-      buttonEl.removeAttribute("disabled");
+      // buttonEl.removeAttribute("disabled");
       questionEl.value = "";
       resultsEl.innerHTML = "";
       previousQuestions.forEach(function (question) {
