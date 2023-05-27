@@ -49,7 +49,7 @@ buttonEl.addEventListener("click", function (e) {
       questionEl.value = "";
       resultsEl.innerHTML = "";
       previousQuestions.forEach(function (question) {
-        resultsEl.insertAdjacentHTML("beforeend", `<tr><td>${question.question}</td><td>${question.answer}</td></tr>`);
+        resultsEl.insertAdjacentHTML("afterbegin", `<tr><td>${question.question}</td><td>${question.answer}</td></tr>`);
       });
     }, "2000");
   }, "2000");
