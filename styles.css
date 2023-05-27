@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Tahoma";
+}
+
+#header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8rem;
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+}
+
+main > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main img {
+  height: 15rem;
+}
+
+div h3 {
+  text-align: center;
+}
+
+.bubble {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  background: #000;
+  border-radius: 40px;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.5s;
+}
+
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #000;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #000;
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+}
+
+input {
+  border-radius: 0.9rem;
+  height: 2rem;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 1rem;
+  margin: 1rem 1rem 0 1rem;
+}
+
+button {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+/* The animation code */
+@keyframes upAndDown {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 100px;
+  }
+}
+
+@keyframes sideToSide {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+#ball {
+  position: relative;
+  animation-name: upAndDown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  overflow: hidden;
+}
+
+#thinking {
+  position: relative;
+  animation-name: sideToSide;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  left: 13rem;
+  bottom: -7rem;
+  opacity: 0;
+}
+
+#thinking img {
+  height: 9rem;
+}
+
+#thinking p {
+  position: relative;
+  top: -7.3rem;
+  text-align: center;
+  width: 9rem;
+}
+
+main > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TABLE */
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #6bdd01;
+  color: white;
+}
+
+@media only screen and (max-width: 940px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  #header h1 {
+    font-size: 3rem;
+  }
+
+  #header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  main > div:first-child {
+    flex-direction: column;
+  }
+
+  .bubble {
+    margin-left: 0;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  #frog-container {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bubble-bottom-left:before {
+    left: 16rem;
+  }
+
+  #thinking {
+    left: 7.5rem;
+    bottom: -6.5rem;
+  }
+}

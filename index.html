@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Created by Reuben -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic 8 Ball</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header id="header">
+      <h1>Magic 8 Ball</h1>
+      <h2>Ask a question and the 8 Ball will respond...</h2>
+    </header>
+    <main>
+      <div>
+        <div id="frog-container">
+          <div class="bubble bubble-bottom-left">
+            What is your question for the magic 8 ball?
+            <form><input type="text" /><button>&#10003;</button></form>
+          </div>
+          <img id="frog" src="frog.webp" />
+        </div>
+        <div id="ball">
+          <div id="thinking">
+            <img src="thinking.png" />
+            <p>Hmm...</p>
+          </div>
+          <img src="ball.webp" />
+        </div>
+      </div>
+      <div>
+        <h3>Previously asked questions and answers:</h3>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>Answer</th>
+              </tr>
+            </thead>
+            <tbody id="results"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
