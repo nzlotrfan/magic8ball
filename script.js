@@ -4,6 +4,7 @@ const thinkingElText = document.querySelector("#thinking>p");
 const buttonEl = document.querySelector("button");
 const resultsEl = document.getElementById("results");
 const ballEl = document.getElementById("ball");
+const resultsContainerEl = document.getElementById("results-container");
 
 const positive = ["Yes", "Do it"];
 const neutral = ["Maybe", "Perhaps"];
@@ -12,7 +13,7 @@ const previousQuestions = [];
 
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
-  ballEl.scrollIntoView({ block: "center" });
+  resultsContainerEl.scrollIntoView({ behavior: "smooth", block: "end" });
   questionEl.blur();
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
