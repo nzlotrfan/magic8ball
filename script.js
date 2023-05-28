@@ -4,7 +4,7 @@ const thinkingElText = document.querySelector("#thinking>p");
 const buttonEl = document.querySelector("button");
 const resultsEl = document.getElementById("results");
 const ballEl = document.getElementById("ball");
-const resultsContainerEl = document.getElementById("results-container");
+const gameContainerEl = document.getElementById("game-container");
 
 const positive = ["Yes", "Do it"];
 const neutral = ["Maybe", "Perhaps"];
@@ -20,7 +20,7 @@ buttonEl.addEventListener("click", function (e) {
   buttonEl.setAttribute("disabled", "true");
 
   setTimeout(function () {
-    ballEl.scrollIntoView({ behavior: "smooth", block: "end" });
+    gameContainerEl.scrollIntoView({ behavior: "smooth", block: "end" });
   }, 500);
 
   setTimeout(function () {
