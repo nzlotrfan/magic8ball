@@ -20,7 +20,7 @@ buttonEl.addEventListener("click", function (e) {
   buttonEl.setAttribute("disabled", "true");
 
   setTimeout(function () {
-    resultsContainerEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    ballEl.scrollIntoView({ behavior: "smooth", block: "start" });
   }, 500);
 
   setTimeout(function () {
