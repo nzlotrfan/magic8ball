@@ -13,8 +13,8 @@ const previousQuestions = [];
 
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
-  resultsContainerEl.scrollIntoView({ behavior: "smooth", block: "end" });
   questionEl.blur();
+  resultsContainerEl.scrollIntoView({ behavior: "smooth", block: "start" });
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
