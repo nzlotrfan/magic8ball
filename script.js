@@ -14,10 +14,14 @@ const previousQuestions = [];
 buttonEl.addEventListener("click", function (e) {
   e.preventDefault();
   questionEl.inputMode = "none";
-  resultsContainerEl.scrollIntoView({ behavior: "smooth", block: "start" });
+
   thinkingEl.style.opacity = 1;
   buttonEl.style.opacity = 0;
   buttonEl.setAttribute("disabled", "true");
+
+  setTimeout(function () {
+    resultsContainerEl.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 500);
 
   setTimeout(function () {
     const responseType = Number((Math.random() * 2).toFixed());
@@ -43,6 +47,7 @@ buttonEl.addEventListener("click", function (e) {
     previousQuestions.push({ question: questionEl.value, answer: currentAnswer });
     setTimeout(function () {
       thinkingElText.textContent = "Hmm...";
+      questionEl.inputMode = "text";
       thinkingEl.style.animationIterationCount = "infinite";
       thinkingEl.style.opacity = 0;
       buttonEl.style.opacity = 1;
